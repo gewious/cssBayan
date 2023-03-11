@@ -1,0 +1,43 @@
+html {
+    width: 100%;
+}
+
+body {
+    font-size: 100%;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+    background-color: #f0f0ea;
+}
+
+img {
+    width: 100%;
+}
+
+input[type=radio] {
+    appearance: none;
+}
+
+.bayan-block__title__icon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 0.1rem solid #d0cdbe;
+}
+
+.bayan-block {
+    margin: 0% 10%;
+}
+
+.bayan-title {
+    margin-left: 10%;
+}
+
+.bayan-block-title {
+    font-size: 120%;
+}
+
+.meme-img {
+    margin-bottom: 7%;
+}
