@@ -11,12 +11,8 @@ body {
     background-color: #f0f0ea;
 }
 
-img {
-    width: 100%;
-}
-
 input[type=radio] {
-    appearance: none;
+    display: none;
 }
 
 .bayan-block__title__icon {
@@ -28,6 +24,9 @@ input[type=radio] {
 
 .bayan-block {
     margin: 0% 10%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .bayan-title {
@@ -38,6 +37,29 @@ input[type=radio] {
     font-size: 120%;
 }
 
+.bayan-label {
+    cursor: pointer;
+}
+
 .meme-img {
+    max-height: 0;
+    flex-grow: 1;
+    width: 100%;
+    transition: max-height 1s ease;
+}
+
+input[type=radio]:checked + .bayan-block .meme-img {
+    max-height: 100rem;
     margin-bottom: 7%;
 }
+
+input[type=radio]:not(:checked) + .bayan-block .meme-img {
+    max-height: 0;
+    transition: max-height 0s ease;
+}
+
+input[type=radio]:checked + .bayan-block .fa.fa-plus {
+    transform: rotate(45deg);
+    transition: 0.4s ease;
+}
+
