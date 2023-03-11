@@ -15,6 +15,10 @@ input[type=radio] {
     display: none;
 }
 
+.bayan-container {
+    margin: 0% 10%;
+}
+
 .bayan-block__title__icon {
     display: flex;
     align-items: center;
@@ -23,7 +27,6 @@ input[type=radio] {
 }
 
 .bayan-block {
-    margin: 0% 10%;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -35,22 +38,23 @@ input[type=radio] {
 
 .bayan-block-title {
     font-size: 120%;
-}
-
-.bayan-label {
-    cursor: pointer;
+    color: #45b8f0;
 }
 
 .meme-img {
     max-height: 0;
     flex-grow: 1;
     width: 100%;
-    transition: max-height 1s ease;
+    transition: max-height 1.5s ease;
+}
+
+.fa.fa-plus {
+    transition: visibility 0.1s ease;
 }
 
 input[type=radio]:checked + .bayan-block .meme-img {
     max-height: 100rem;
-    margin-bottom: 7%;
+    margin-bottom: 5%;
 }
 
 input[type=radio]:not(:checked) + .bayan-block .meme-img {
@@ -60,6 +64,62 @@ input[type=radio]:not(:checked) + .bayan-block .meme-img {
 
 input[type=radio]:checked + .bayan-block .fa.fa-plus {
     transform: rotate(45deg);
-    transition: 0.4s ease;
+    transition: 0.1s ease;
 }
 
+input[type=radio]:checked ~ .bayan-block > .bayan-block__title__icon > .bayan-block-title {
+    color: black;
+}
+
+
+@media (min-width: 820px) {
+    .bayan-block-title {
+        font-size: 140%;
+    }
+
+    .bayan-title {
+        font-size: 230%;
+    }
+
+    .bayan-label {
+    cursor: pointer;
+    }
+
+    .meme-img {
+        transition: max-height 0.8s ease;
+    }
+
+    .fa.fa-plus {
+        visibility: hidden;
+    }
+}
+
+@media (min-width: 1920px) {
+    .bayan-block-title {
+        font-size: 200%;
+    }
+
+    .bayan-title {
+        font-size: 300%;
+    }
+
+    .meme-img {
+        transition: max-height 0.5s ease;
+    }
+}
+
+
+@media (hover:hover) {
+    .bayan-container:hover .fa.fa-plus {
+        visibility: visible;
+    }
+
+    .bayan-container:hover .bayan-block > .bayan-block__title__icon > .bayan-block-title {
+        color: black;
+    }
+
+    .bayan-label:hover .bayan-block > .meme-img.hov {
+        max-height: 100rem;
+        transition: max-height 1.5s ease;
+    }
+}
