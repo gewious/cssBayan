@@ -11,6 +11,10 @@ body {
     background-color: #f0f0ea;
 }
 
+span {
+    display: block;
+}
+
 input[type=radio] {
     display: none;
 }
