@@ -13,6 +13,7 @@ body {
 
 span {
     display: block;
+    font-weight: 700;
 }
 
 input[type=radio] {
@@ -43,6 +44,7 @@ input[type=radio] {
 .bayan-block-title {
     font-size: 120%;
     color: #45b8f0;
+    margin: 5% 0;
 }
 
 .meme-img {
@@ -78,11 +80,12 @@ input[type=radio]:checked ~ .bayan-block > .bayan-block__title__icon > .bayan-bl
 
 @media (min-width: 820px) {
     .bayan-block-title {
-        font-size: 140%;
+        font-size: 180%;
+        margin: 3% 0;
     }
 
     .bayan-title {
-        font-size: 230%;
+        font-size: 240%;
     }
 
     .bayan-label {
@@ -100,11 +103,11 @@ input[type=radio]:checked ~ .bayan-block > .bayan-block__title__icon > .bayan-bl
 
 @media (min-width: 1920px) {
     .bayan-block-title {
-        font-size: 200%;
+        font-size: 220%;
     }
 
     .bayan-title {
-        font-size: 300%;
+        font-size: 320%;
     }
 
     .meme-img {
