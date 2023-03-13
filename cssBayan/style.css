@@ -51,11 +51,11 @@ input[type=radio] {
     max-height: 0;
     flex-grow: 1;
     width: 100%;
-    transition: max-height 1.5s ease;
+    transition: max-height 1.5s linear;
 }
 
 .fa.fa-plus {
-    transition: visibility 0.1s ease;
+    transition: visibility 0.1s linear;
 }
 
 input[type=radio]:checked + .bayan-block .meme-img {
@@ -65,13 +65,22 @@ input[type=radio]:checked + .bayan-block .meme-img {
 
 input[type=radio]:not(:checked) + .bayan-block .meme-img {
     max-height: 0;
-    transition: max-height 0s ease;
+    transition: max-height 0s linear;
 }
 
 input[type=radio]:checked + .bayan-block .fa.fa-plus {
     transform: rotate(45deg);
-    transition: 0.1s ease;
+    transition: 0.1s linear;
 }
+
+input[type=radio]:active + .bayan-block .fa.fa-plus {
+    color: #45b8f0;
+}
+
+input[type=radio]:active ~ .bayan-block > .bayan-block__title__icon > .bayan-block-title {
+    color: #45b8f0;
+}
+
 
 input[type=radio]:checked ~ .bayan-block > .bayan-block__title__icon > .bayan-block-title {
     color: black;
@@ -93,7 +102,7 @@ input[type=radio]:checked ~ .bayan-block > .bayan-block__title__icon > .bayan-bl
     }
 
     .meme-img {
-        transition: max-height 0.8s ease;
+        transition: max-height 0.8s linear;
     }
 
     .fa.fa-plus {
@@ -111,7 +120,7 @@ input[type=radio]:checked ~ .bayan-block > .bayan-block__title__icon > .bayan-bl
     }
 
     .meme-img {
-        transition: max-height 0.5s ease;
+        transition: max-height 0.5s linear;
     }
 }
 
@@ -127,6 +136,11 @@ input[type=radio]:checked ~ .bayan-block > .bayan-block__title__icon > .bayan-bl
 
     .bayan-label:hover .bayan-block > .meme-img.hov {
         max-height: 100rem;
-        transition: max-height 1.5s ease;
+        transition: max-height 1.5s linear;
+    }
+
+    .bayan-label:hover .fa.fa-plus {
+        transform: rotate(45deg);
+        transition: transform 0.1s;
     }
 }
