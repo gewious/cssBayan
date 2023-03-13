@@ -1,3 +1,4 @@
+@media (min-width: 300px) {
 html {
     width: 100%;
 }
@@ -84,6 +85,7 @@ input[type=radio]:active ~ .bayan-block > .bayan-block__title__icon > .bayan-blo
 
 input[type=radio]:checked ~ .bayan-block > .bayan-block__title__icon > .bayan-block-title {
     color: black;
+}
 }
 
 
