@@ -51,7 +51,8 @@ input[type=radio] {
 .meme-img {
     max-height: 0;
     flex-grow: 1;
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
     transition: max-height 1.5s linear;
 }
 
@@ -69,11 +70,6 @@ input[type=radio]:not(:checked) + .bayan-block .meme-img {
     transition: max-height 0s linear;
 }
 
-input[type=radio]:checked + .bayan-block .fa.fa-plus {
-    transform: rotate(45deg);
-    transition: 0.1s linear;
-}
-
 input[type=radio]:active + .bayan-block .fa.fa-plus {
     color: #45b8f0;
 }
@@ -85,6 +81,11 @@ input[type=radio]:active + .bayan-block .meme-img {
 input[type=radio]:active ~ .bayan-block > .bayan-block__title__icon > .bayan-block-title {
     color: #45b8f0;
 }
+
+input[type=radio]:checked + .bayan-block > .bayan-block__title__icon > .bayan-block-title {
+    color: black;
+}
+
 }
 
 
@@ -104,6 +105,7 @@ input[type=radio]:active ~ .bayan-block > .bayan-block__title__icon > .bayan-blo
 
     .meme-img {
         transition: max-height 0.8s linear;
+        width: 50%;
     }
 
     .fa.fa-plus {
